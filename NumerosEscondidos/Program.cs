@@ -24,16 +24,17 @@ class Program
 
         for (int i = A; i <= B; i++)
         {
+            if (i % C != 0)
+                continue;
+
             int somaDigitos = SomaDigitos(i);
-            bool divisivel = DivisivelporC(i, C);
             bool contemDigitoInvalido = ContemDigitoInvalido(i, E);
 
-            if (divisivel && somaDigitos >= D && !contemDigitoInvalido)
+            if (somaDigitos >= D && !contemDigitoInvalido)
             {
                 numerosEncontrados.Add(i);
             }
         }
-
         return numerosEncontrados;
     }
 
@@ -66,10 +67,10 @@ class Program
     {
 
 
-        int A = 10, B = 50, C = 5, D = 1;
+        int A = 10, B = 50, C = 5, D = 5;
         List<int> E = new List<int> { 3, 7 };
         var resultado = EncontrarNumerosEscondidos(A, B, C, D, E);
-        Console.WriteLine("Teste 1: " + string.Join(" | ", resultado));
+        Console.WriteLine("Teste: " + string.Join(" | ", resultado));
 
 
 
