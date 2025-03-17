@@ -103,15 +103,27 @@ class Program
         Console.WriteLine("Teste 5: " + string.Join(" | ", resultado5));
 
 
-        int A6 = 50, B6 = 50, C6 = 10, D6 = 5;
+        int A6 = 40, B6 = 40, C6 = 10, D6 = 5;
         List<int> E6 = new List<int> { 3 };
         var resultado6 = EncontrarNumerosEscondidos(A6, B6, C6, D6, E6);
         Console.WriteLine("Teste 6: " + string.Join(" | ", resultado6));
 
 
-        int A7 = 10, B7 = 20, C7 = 25, D7 = 1;
+        int A7 = 20, B7 = 30, C7 = 25, D7 = 1;
         List<int> E7 = new List<int> { 9 };
         var resultado7 = EncontrarNumerosEscondidos(A7, B7, C7, D7, E7);
         Console.WriteLine("Teste 7: " + string.Join(" | ", resultado7));
+
+        try
+        {
+            int A8 = 10, B8 = 20, C8 = 2, D8 = 5;
+            List<int> E8 = new List<int> { 10 }; 
+            var resultado8 = EncontrarNumerosEscondidos(A8, B8, C8, D8, E8);
+            Console.WriteLine("Teste 8: " + string.Join(" | ", resultado8));
+        }
+        catch (ArgumentException ex)
+        {
+            Console.WriteLine("Teste 8: " + ex.Message);
+        }
     }
 }
