@@ -69,8 +69,8 @@ class Program
 
         int A = 10, B = 50, C = 5, D = 5;
         List<int> E = new List<int> { 3, 7 };
-        var resultado = EncontrarNumerosEscondidos(A, B, C, D, E);
-        Console.WriteLine("Teste: " + string.Join(" | ", resultado));
+        var resultadoPadrao = EncontrarNumerosEscondidos(A, B, C, D, E);
+        Console.WriteLine("Teste Padrão: " + string.Join(" | ", resultadoPadrao));
 
 
 
